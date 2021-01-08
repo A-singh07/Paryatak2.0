@@ -1,6 +1,6 @@
 # Paryatak2.0
 
-New & better version of Paryatak (pure CSS),
+New & better version of Paryatak,
 
 -> Added functionality to book a tour to the sites.
 -> Added a contact form, for customer support and feedback.
