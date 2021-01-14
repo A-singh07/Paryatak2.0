@@ -1,5 +1,23 @@
 // ------- NAV ------
 
+//Rotate on hover
+$(".hamline").hover(
+    function () {
+        $(this).css("transform", "rotate(180deg)");
+    }, function () {
+        $(this).css("transform", "rotate(0deg)");
+    }
+);
+
+$(".hamclose").hover(
+    function () {
+        $(this).css("transform", "rotate(180deg)");
+    }, function () {
+        $(this).css("transform", "rotate(0deg)");
+    }
+);
+
+// open Menu
 $(".hamline").click(function () {
     $(this).css("display", "none");
     $(".hamclose").css("display", "flex");
@@ -10,6 +28,7 @@ $(".hamline").click(function () {
     $(".right-side-menu img").css("borderRadius", "2em");
 });
 
+// Close menu
 $(".hamclose").click(function () {
     $(this).css("display", "none");
     $(".hamline").css("display", "flex");

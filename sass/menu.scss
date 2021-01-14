@@ -1,5 +1,4 @@
 @import 'resources';
-@import 'config';
 
 nav{
     position: fixed;
@@ -34,6 +33,7 @@ nav{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: 0.3s ease;
 
                 i{
                     font-size: 2.6em;
@@ -49,22 +49,6 @@ nav{
                     color: white;
                 }
             }
-
-            // .hamline{
-            //     position: relative;
-            //     @include ham-lines();
-
-            //     &::before, &::after{
-            //         content: '';
-            //         @include ham-lines();
-            //         position: absolute;
-            //         top: -10px;
-            //     }
-
-            //     &::after{
-            //         top: 10px;
-            //     }
-            // }
         }
 
         .menu-container{
