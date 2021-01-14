@@ -1,0 +1,469 @@
+@import 'resources';
+@import 'config';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;   //Important for scroll behaviour
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    font-size: 1.8em;
+}
+
+// for all the buttons in the site
+.btn{
+    display: inline-block;
+    margin: 20px;
+    font-size: 1.4em;
+    background-image: $btn-gradient-1;
+    padding: 15px 30px;
+    border-radius: 2em;
+    color: rgb(38, 44, 109);
+    transition: all 0.3s ease;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.493);
+}
+
+// Animation -contents
+@keyframes modal-animate{
+    from{top: -100px; opacity: 0;}
+    to{top: 0px; opacity: 1;}
+}
+
+
+
+/* --------------- Landing Page ----------- */
+
+.mother-container{
+    width: 100vw;
+    height: 100vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory ;   // dealing with only y-axis and it's mandatory.
+
+    @media screen and (max-width: $tablet), (max-width:$mobile){
+        scroll-snap-type: none;
+    }
+
+    header{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        scroll-snap-align: start;  // works with scroll-snap-type in the container to align the element
+        @media screen and (max-width: $tablet), (max-width:$mobile){
+            scroll-snap-align: none;
+        }
+    
+        .header-bg-wrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            overflow: hidden;
+    
+            video{
+                position: absolute;
+                min-width: 100%;
+                min-height: 100%;
+
+                @media screen and (max-width:$tablet), (max-width:$mobile){
+                    display: none;
+                }
+            }
+            img{
+                position: absolute;
+                display: none;
+                height: 100%;
+                @media screen and (max-width:$tablet){
+                    display: block;
+                }
+                @media screen and (max-width:$mobile){
+                    left: -100px;
+                }
+            }
+        }
+    
+        .header-content{
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+            height: 100vh;
+            padding-top: 12em;
+            line-height: 1em;
+            font-family: $quicksand;
+            color: white;
+            background-color: $sky-blue; //bg for overlay
+
+            h4{
+                font-size: 1.8em;
+            }
+
+            div{
+                // background-color: black;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 60px;
+                margin: 0px auto;
+                font-size: 2em;
+                @media screen and (max-width:$tablet){
+                    height: 180px;
+                }
+                @media screen and (max-width:$mobile){
+                    #amazing{display: none;}
+                }
+                h1{
+                    margin: 10px;
+                }
+                #india{
+                    font-family: $caveat;
+                    font-size: 2.6em;
+                    color: $fawn;
+                    @media screen and (max-width:$tablet){
+                        width: 100%;
+                    }
+                    @media screen and (max-width:$mobile){
+                        font-size: 4em;
+                        line-height: 1em;
+                    }
+                }
+            }
+            .explore-btn{
+                padding: 20px 40px;
+                font-weight: 700;
+            }
+            .explore-btn:hover{
+                background-image: none;
+                background-color: rgba(148, 148, 148, 0.356);
+                border: 2px solid white;
+                color: white;
+            }
+        }
+    }
+    /* -----------X-------- Landing Page --------X------- */
+    
+    
+    /* --------X----- Main Content of the site -----X------ */
+    
+    section{
+        // background-color: yellow;
+        position: relative;
+        z-index: 1;
+        padding-top: 50px;
+        width: 100%;
+        min-height: 100%;
+        text-align: center;
+        scroll-snap-align: start;  // works with scroll-snap-type in the container to align the element
+        @media screen and (max-width: $tablet), (max-width:$mobile){
+            scroll-snap-align: none;
+        }
+        
+        h1{  // will be applicable to all h1 inside section, even inside sub-sub division.
+            font-family: $josefin-sans;
+            padding: 20px;
+        }
+
+        .cards-container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-bottom: 100px;
+            background: url(../Assets/Abract01.png) no-repeat;
+            background-size: 65%;
+            background-position: right;
+            background-attachment: fixed;
+            // background-color: greenyellow;
+
+            .card{
+                // background-color: pink;
+                display: grid;
+                grid-template-columns: 1.7fr 1fr;
+                column-gap: 10px;
+                height: 50vh;
+                width: 60%;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 60px;
+                border-bottom-right-radius: 2.3em;
+                border-top-left-radius: 2.3em;
+                box-shadow: 3px 2px 20px 1px rgba(0, 0, 0, 0.377);
+
+                @media screen and (max-width: $mobile), (max-width: $tablet){
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1.7fr 1fr;
+                    width: 85%;
+                    height: 80vh;
+                }
+
+                div{
+                    // width: 60%;
+                    height: 100%;
+                    border-top-left-radius: 2.3em;
+                    overflow: hidden; // to stop image from coming out when hovered.
+                    // background-color: yellow;
+                    
+                    // @media screen and (max-width:$mobile), (max-width: $tablet){
+                    //     display: block;
+                    //     width: 100%;
+                    //     height: 70%;
+                    // }
+
+                    img{
+                        // background-color: burlywood;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1s ease;  // smooth transition
+                        cursor: pointer;
+
+                    }
+                    img:hover{
+                        transform: scale(1.3);
+                        @media screen and (max-width: $mobile), (max-width: $tablet){
+                            transform: scale(1);
+                        }
+                    }
+                }
+                h2{
+                    // background-color: rgb(112, 177, 112);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: $quicksand;
+                    padding: 30px;
+                    font-size: 1.8em;
+                    
+                    @media screen and (max-width: $mobile), (max-width: $tablet){
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+            .card:nth-of-type(even){
+                grid-template-columns: 1fr 1.7fr;
+
+                @media screen and (max-width:$mobile), (max-width: $tablet) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1.7fr 1fr;
+                }
+
+                div{
+                    order: 2;
+                    border-top-left-radius: 0;
+                    border-bottom-right-radius: 2.3em;
+                    @media screen and (max-width:$mobile), (max-width: $tablet){
+                        order: 0;
+                        border-bottom-right-radius: 0em;
+                    }
+
+                    img{
+                        @media screen and (max-width: $mobile), (max-width: $tablet) {
+                            border-top-left-radius: 2.3em;
+                        }
+                    }
+                }
+            }
+            .detail-modal{
+                // background-color: khaki;
+                display: none;  // change to none
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 1.7em;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.4);
+                opacity: 0;
+                font-size: 1.2em;
+                z-index: 11;
+                
+                .modal-content{
+                    background-color: $cornsilk;
+                    position: relative;
+                    width: 80%;
+                    height: 95%;
+                    margin: auto;
+                    margin-top: 40px;
+                    padding: 10px;
+                    overflow-y: auto;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.568);
+                    //animation time
+                    animation-name: modal-animate;
+                    animation-duration: 0.6s;
+                    @media screen and (max-width: $mobile), (max-width:$tablet) {
+                        width: 90%;
+                        img{
+                            width: 95%;
+                        }
+                    }
+
+                    .close-modal{
+                        position: sticky;
+                        top: 15px;
+                        margin: 15px 50px 0 0;
+                        float: right;
+                        font-family: $quicksand;
+                        font-size: 2.5em;
+                        font-weight: 800;
+                        color: black;
+                        padding: 5px;
+                        transition: 0.3s;
+                        @media screen and(max-width:$mobile), (max-width:$tablet) {
+                            background-color: white;
+                            padding: 0px 5px 5px 5px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .close-modal:hover{
+                        transform: scale(0.9);
+                    }
+                    .close-modal:focus{
+                        color: rgb(255, 163, 77);
+                    }
+
+                    h1{
+                        background-color: $cornsilk-dark;
+                        margin-top: 50px;
+                        border-radius: 1.7em;
+                        width: 60%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        line-height: 1.2em;  // 1.7(.detail-modal) + 1.2(here)
+                        @media screen and(max-width:$mobile), (max-width:$tablet){
+                            width: 70%;
+                        }
+                    }
+                    p{
+                        font-family: $quicksand;
+                        font-size: 1.1em;
+                        text-align: justify;
+                        padding: 50px;
+                    }
+                    .map-btn{
+                        font-family: $caveat;
+                        font-size: 1.5em;
+                        font-weight: 800;
+                    }
+                    .map-btn:hover{
+                        transform: scale(1.1);
+                        opacity: 0.9;
+                    }
+                    .map-btn:focus{
+                        transform: scale(0.9);
+                    }
+                    .more-btn{
+                        @extend .map-btn
+                    }
+                }
+            }
+            #place1:target,
+            #place2:target,
+            #place3:target,
+            #place4:target,
+            #place5:target,
+            #place6:target,
+            #place7:target,
+            #place8:target,
+            #place9:target,
+            #place10:target{
+                display: block;
+                opacity: 1;
+            }
+        }
+        /*-------X---- Cards container------X------ */
+    }
+    /* --------X----- Main Content of the site ----X------- */
+
+    /* --------------------Footer ---------------------------- */
+    footer{
+        // background-color: brown;
+        width: 100%;
+        height: 15vh;
+        position: relative;
+        scroll-snap-align: start;
+        @media screen and (max-width:$mobile), (max-width: $tablet) {
+            height: 12vh;
+            scroll-snap-align: none;
+        }
+
+        .contact{
+            background-color:black;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            text-align: center;
+
+            a{
+                display:inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+                border-radius: 50%;
+                background-color: white;
+                margin: 5px;
+                transition: 0.3s ease-out;
+
+                i{
+                    font-size: 1.5em;
+                }
+            }
+            #facebook:hover{
+                background-color: $facebook-color;
+                color: white;
+            }
+            #instagram:hover{
+                background: $instagram-color;
+                color: white;
+                i{transform: scale(1.2);}
+            }
+            #twitter:hover{
+                background-color: $twitter-color;
+                color: white;
+            }
+            #linkedin:hover{
+                background-color: $linkedin-color;
+                color: white;
+            }
+
+            @media screen and (max-width: $mobile), (max-width: $tablet) {
+                #facebook{
+                    background-color: $facebook-color;
+                    color: white; 
+                }
+                #instagram{
+                    background: $instagram-color;
+                    color: white;
+                    i{transform: scale(1.2);}
+                }
+                #twitter{
+                    background-color: $twitter-color;
+                    color: white;
+                }
+                #linkedin{
+                    background-color: $linkedin-color;
+                    color: white;
+                }
+            }
+
+        }
+    }
+    /* ----------X--------Footer -----------X---------- */
+}
+/* ----------X------Mother Container ------------X-------- */

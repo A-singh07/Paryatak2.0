@@ -1,0 +1,9 @@
+
+// mixin for hamburger lines
+@mixin ham-lines {
+    width: 40px;
+    background-color: white;
+    height: 4px;
+    margin: auto;
+    border-radius: 10px;
+}

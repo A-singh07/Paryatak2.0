@@ -1,0 +1,46 @@
+/* ---- Original - Colors ---- */
+// $dark-olive-green: #606c38ff;
+// $kombu-green: #283618ff;
+// $cornsilk: #fefae0ff;
+// $fawn: #dda15eff;
+// $liver-dogs: #bc6c25ff;
+// $olive-drab-7: #433a2aff;
+
+
+// colors - modified
+$dark-olive-green: rgba(96, 108, 56, 0.637);
+$kombu-green: #283618ff;
+$cornsilk: #fff7d2;
+$cornsilk-dark: #fff193;
+$fawn: rgb(255, 177, 59);  // for 'India'
+$liver-dogs: #bc6c25ff;
+$olive-drab-7: #433a2aff;
+
+$sky-blue:#b2d9e681;
+
+// color for social media Icons
+$facebook-color:#4267B2;
+$instagram-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+$twitter-color:#00acee;
+$linkedin-color: #1b7aa7;
+
+
+$btn-gradient-1:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+/* ------ FONTS -------- */
+
+// Quicksand
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+$quicksand: 'Quicksand', sans-serif;
+
+// Josefin sans
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+$josefin-sans: 'Josefin Sans', sans-serif;
+
+//Caveat
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+$caveat: 'Caveat', cursive;
+
+// breakpoints for diff devices:
+$mobile: 600px;
+$tablet: 768px;

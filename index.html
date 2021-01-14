@@ -5,18 +5,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- menu Style Sheet -->
+    <link rel="stylesheet" href="css/menu.css">
 
     <title>Paryatak</title>
+
 </head>
 
 <body>
 
+    <div class="mother-container">
+        <!-- -------------------- Navigation Menu -------------------- -->
+        <nav>
+            <div class="ham-menu-wrap">
+
+                <div class="ham-open">
+                    <div class="hamline"><i class="fas fa-bars"></i></div>
+                    <div class="hamclose"><i class="fas fa-times"></i></div>
+                </div>
+
+                <div class="menu-container">
+                    <div class="menu-content">
+
+                        <div class="left-side-menu">
+                            <a href="#shop">Shop</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#feedback">feedback</a>
+                        </div>
+
+                        <div class="right-side-menu">
+                            <img src="./Assets/action-blur-car-child-386009.jpg" alt="ToyCar" width="100%"
+                                height="100%">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="site-name">
+                <div><a href="#home">Paryatak</a></div>
+            </div>
+            <div class="feedback">
+                <div><a href="#contact">contact</a></div>
+            </div>
+
+        </nav>
+
+        <!-- -----------x-------- Navigation Menu -----------X------- -->
+
+        <!-- --------------------- Header Area ------------------------->
+        <header id="home">
+
+            <div class="header-bg-wrap">
+                <video src="Assets/traveling-bg-video.mp4" autoplay loop="true" muted="true"></video>
+                <!-- add autoplay loop="true" muted="true"-->
+
+                <img src="./Assets/scenic-view-of-rice-paddy-247599.jpg">
+            </div>
+            <div class="header-content">
+                <h4>Come Explore</h4>
+                <div>
+                    <h1 id="amazing">Amazing Places in</h1>
+                    <h1 id="india">India</h1>
+                </div>
+                <a href="#explore" class="btn explore-btn">Explore</a>
+            </div>
+        </header>
+        <!-- ----------x--------- Header Area -------------x------->
+
+        <!-- --------------  Main Content of site ----------------->
+        <section id="explore">
+
+            <h1>Get lost in these Paradise</h1>
+            <div class="cards-container">
+                <!-- 1st place -->
+                <a href="#place1" class="card p1" id="place1-card">
+                    <div><img src="Assets/Images/khajjiar.jpg"></div>
+                    <h2>Khajjiar,<br> Himachal Pradesh</h2>
+                </a>
+                <div id="place1" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place1-card" class="close-modal">&times;</a>
+                        <h1>Khajjiar, <br>Himachal Pradesh</h1>
+                        <img src="Assets/Images/Khajjiar-2.jpg" width="70%" height="60%">
+                        <p>Often referred to as 'mini-Switzerland of India', Khajjiar is a small town near Dalhousie
+                            which provides tourists a unique combination of forests, lakes and pastures.Located at an
+                            altitude of 6,500 feet, the natural beauty and picturesque landscape of this place are bound
+                            to leave an everlasting impression on a tourist. Khajjiar is known for its nine-hole
+                            golf-course which is nestled in the midst of lush greenery and a breathtaking landscape.
+                            Khajjiar is a small plateau which also has a small lake which is one of the most favored
+                            tourist spots in this town. Khajjiar is surrounded by green meadows and dense forests and it
+                            is also known for its beautiful temples. <br> This region also attracts adventure seekers
+                            and has a lot of options in adventure sports like paragliding, horse riding, zorbing,
+                            trekking etc.</p>
+                        <a href="https://www.google.com/maps/place/Khajjiar,+Himachal+Pradesh+176314/@32.5503598,76.0455439,14z/data=!3m1!4b1!4m5!3m4!1s0x391c966a723433b5:0xb281d8e676ebd3dc!8m2!3d32.555795!4d76.0655834"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.holidify.com/places/khajjiar/" target="_blank" rel="noopener noreferrer"
+                            class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 2nd Place -->
+                <a href="#place2" class="card p2" id="place2-card">
+                    <div><img src="Assets/Images/Lake Pichola, Udaipur-1.jpg"></div>
+                    <h2>Lake Pichola, <br> Udaipur</h2>
+                </a>
+                <div id="place2" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place2-card" class="close-modal">&times;</a>
+                        <h1>Lake Pichola, <br> Udaipur</h1>
+                        <img src="Assets/Images/Lake Pichola, Udaipur-2.jpg" width="70%" height="60%">
+                        <p>Picturesque, serene, and breathtakingly beautiful, Lake Pichola is an artificial freshwater
+                            lake built in the 14th century (in 1362 AD, to be precise). Often featured in Hollywood and
+                            Bollywood movie thanks to its picture-perfect grandeur, this lake gets an astounding number
+                            of tourists every year. Did you know that the James Bond film Octopussy was shot here on the
+                            Taj Lake Palace, a star attraction of this lake? This luxury hotel (which was once a grand
+                            palace) is located on Jag Niwas, one of the islands on the lake, and offers the well-heeled
+                            services fit for a king and queen.</p>
+                        <a href="https://www.google.com/maps/place/Lake+Pichola/@24.5719986,73.6614904,14z/data=!3m1!4b1!4m5!3m4!1s0x3967e56041553fe7:0xdfef96846886cdd0!8m2!3d24.572!4d73.679"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://udaipurtourism.co.in/lake-pichola-udaipur" target="_blank"
+                            rel="noopener noreferrer" class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 3rd Place -->
+                <a href="#place3" class="card p3" id="place3-card">
+                    <div><img src="Assets/Images/Munnar.jpg"></div>
+                    <h2>Munnar, <br> Kerala</h2>
+                </a>
+                <div id="place3" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place3-card" class="close-modal">&times;</a>
+                        <h1>Munnar, <br> Kerala</h1>
+                        <img src="Assets/Images/Munnar-1.jpg" width="70%" height="60%">
+                        <p>Munnar - breathtakingly beautiful - a haven of peace and tranquility - the idyllic tourist
+                            destination in God's own country. <br>
+                            Munnar is a town in the Western Ghats mountain range in India’s Kerala state. A hill station
+                            and former resort for the British Raj elite, it's surrounded by rolling hills dotted with
+                            tea plantations established in the late 19th century. Eravikulam National Park, a habitat
+                            for the endangered mountain goat Nilgiri tahr, is home to the Lakkam Waterfalls, hiking
+                            trails and 2,695m-tall Anamudi Peak.</p>
+                        <a href="https://www.google.com/maps/place/Munnar,+Kerala+685612/@10.0806491,77.0466683,14z/data=!3m1!4b1!4m5!3m4!1s0x3b0799794d099a6d:0x63250e5553c7e0c!8m2!3d10.0889333!4d77.0595248"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.munnar.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 4th Place -->
+                <a href="#place4" class="card p4" id="place4-card">
+                    <div><img src="Assets/Images/dzukou-valley.png"></div>
+                    <h2>Dzukou Valley, <br> Nagaland</h2>
+                </a>
+                <div id="place4" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place4-card" class="close-modal">&times;</a>
+                        <h1>Dzukou Valley, <br> Nagaland</h1>
+                        <img src="Assets/Images/Dzukou Valley- camping.jpg" width="70%" height="60%">
+                        <p>The Dzüko Valley is a valley located in borders of the state of Nagaland and Manipur in the
+                            Southern Angami region of northeast India. This valley is well known for its natural
+                            environment, seasonal flowers and flora and fauna. It is situated at an altitude of 2452 m
+                            above sea level.Also known as the Valley of Flowers, the Dzukou Valley is one of the most
+                            visited tourist attractions in the North East.it is considered to be one of the most famous
+                            adventure spots in Kohima, Nagaland.
+                            <br>In summer, vivid green hillocks pave the way for blue mountaintops, and bright flowers
+                            wave in the winds amongst the tall grasses. In winter, temperatures drop far lower than one
+                            would expect in such tropical states, and Dzukou Valley freezes, sometimes covered in white
+                            snow.It’s a beautiful place to hike around in itself, flowers or not, and if you’re into
+                            rock climbing there are plenty of opportunities to break a sweat within the valley.
+                        </p>
+                        <a href="https://www.google.com/maps/place/Dz%C3%BCkou+Valley/@25.5341526,94.0715646,13z/data=!4m8!1m2!2m1!1sDzukou+Valley!3m4!1s0x3748a1d31c756cb1:0x6a69d42997e6088e!8m2!3d25.5071033!4d94.1334665?hl=en"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.lostwithpurpose.com/dzukou-valley/" target="_blank"
+                            rel="noopener noreferrer" class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 5th Place -->
+                <a href="#place5" class="card p5" id="place5-card">
+                    <div><img src="Assets/Images/Binsar Forest Lodge.jpg"></div>
+                    <h2>Binsar, <br> Uttarakhand</h2>
+                </a>
+                <div id="place5" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place5-card" class="close-modal">&times;</a>
+                        <h1>Binsar, <br> Uttarakhand</h1>
+                        <img src="Assets/Images/Binsar Forest-1.jpg" width="70%" height="60%">
+                        <p>Pitched at the impressive altitude of 2,420 m, 95 km from Nainital, Binsar is one of the most
+                            scenic spots in the Kumaon Himalayas. it offers a majestic view of the snowy Himalayan peaks
+                            like the mesmerizing ranges Chaukhamba, Trishul, Nanda Devi, Shivling and Panchchuli which
+                            is why you will keep discovering new walking trails up the mountains and down the valleys,
+                            new lookout points for another spectacular sunset. <br>
+                            Binsar is also a trekker’s paradise. One can go on long treks in the clean air, amidst the
+                            misty mountain trails, towering Oaks and Rhododendrons. Encircled by a vast wildlife
+                            sanctuary, a home to many rare animals, birds and wild flowers. The blanket of green hangs
+                            all around – rocks covered with unusual moss and ferns, flowers and shrubs – foliage
+                            sprouting out of every conceivable nook and corner of the hillside. The entire area is now a
+                            sanctuary.</p>
+                        <a href="https://www.google.com/maps/place/Binsar,+Uttarakhand+263628/@29.7065293,79.7513287,16z/data=!3m1!4b1!4m5!3m4!1s0x39a0b598b44aedc3:0x760dc4f914c720fd!8m2!3d29.7053733!4d79.7551806"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://uttarakhandtourism.gov.in/destination/binsar/" target="_blank"
+                            rel="noopener noreferrer" class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 6th Place -->
+                <a href="#place6" class="card p6" id="place6-card">
+                    <div><img src="Assets/Images/Baga Beach, North Goa.jpg"></div>
+                    <h2>Baga Beach, <br> Goa</h2>
+                </a>
+                <div id="place6" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place6-card" class="close-modal">&times;</a>
+                        <h1>Baga Beach, <br> Goa</h1>
+                        <img src="Assets/Images/Baga Beach - 1.jpg" width="70%" height="60%">
+                        <p>Goa Baga beach is an option for those who want to be away from the hustle and bustle found on
+                            the other beaches. It is one of the most popular beaches in north Goa..with splendid scenic
+                            beauty and some of the best eateries and shacks to provide mouth watering Goan fish curry
+                            and fish fry...a must try in GoaBaga Beach in Goa looks as if it has come straight out of a
+                            painting... Majestic white waves rushing to wipe out the feet imprints left by you on the
+                            white sand while the wind continues to flirt with the palm trees.Goa's Baga beach is a small
+                            but perfect beach located between its two more famous cousins, Anjuna on one side and
+                            Calangute on the other. It is a good place to enjoy some quite moments and dwell in peaceful
+                            contemplation with oneself.</p>
+                        <a href="https://www.google.com/maps/place/Baga+Beach/@15.5567185,73.7463912,16z/data=!3m1!4b1!4m5!3m4!1s0x3bbfea1cd8a1deff:0xba7066c0ee35c1e0!8m2!3d15.5552787!4d73.7517307"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.holidify.com/places/goa/baga-beach-sightseeing-6226.html" target="_blank"
+                            rel="noopener noreferrer" class="btn more-btn">More</a>
+                    </div>
+                </div>
+                <!-- 7th Place -->
+                <a href="#place7" class="card p7" id="place7-card">
+                    <div><img src="Assets/Images/chandipur-beach.jpg"></div>
+                    <h2>Chandipur sea beach, <br> Odisha</h2>
+                </a>
+                <div id="place7" class="detail-modal">
+                    <div class="modal-content">
+                        <a href="#place7-card" class="close-modal">&times;</a>
+                        <h1>Chandipur sea beach, <br> Odisha</h1>
+                        <img src="Assets/Images/Chandipur-Beach-1.png" width="70%" height="60%">
+                        <p>Chandipur, is a beach in Baleswar District, Odisha, India. The beach is located on the shore
+                            of Bay of Bengal and is approximately 16 kilometers from the Baleswar Railway Station. The
+                            beach is unique in a way that the water recedes up to 5 kilometers during the ebb tide. Due
+                            to its unique circumstances, the beach supports bio-diversity. Horseshoe crab is also found
+                            here on the beach towards Mirzapur, the nearby fishing market and community at the
+                            confluence of the Budhabalanga River (Balaramgadi). It is a suitable picnic spot. One of
+                            Odisha Tourism's Panthanivas (guest house) is situated here.</p>
+                        <a href="https://www.google.com/maps?q=Chandipur+sea+beach,+Odisha&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjy2r7M-8XqAhWMyzgGHUmjBTgQ_AUoAnoECA8QBA"
+                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.odishatourism.gov.in/content/tourism/en/blog-details.html?url=the-tale-of-chandipur-beach-beyond-the-vanishing-sea"
+                            target="_blank" rel="noopener noreferrer" class="btn more-btn">More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- --End of Card-conatiner ----- -->
+        </section>
+        <!-- ----------x---  Main Content of site ---------x------->
+
+        <!-- ------------------ Footer ------------------------- -->
+        <footer>
+            <!-- z = (-1)-->
+            <div class="contact" id="contact">
+                <a href="#" id="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" id="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/aman-singh-278a48192" target="_blank" rel="noopener noreferrer"
+                    id="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </footer>
+        <!-- ---------x-------- Footer ---------------------x--- -->
+    </div>
+    <!--------------- End of Mother Container -------------->
 
 
 
 
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <!-- Custom Js File -->
     <script src="./js/main.js"></script>
