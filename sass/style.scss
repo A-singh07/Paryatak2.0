@@ -16,6 +16,10 @@ h1{
     font-size: 1.8em;
 }
 
+::-webkit-scrollbar{
+    width: 0;
+}
+
 // for all the buttons in the site
 .btn{
     display: inline-block;
@@ -27,6 +31,11 @@ h1{
     color: rgb(38, 44, 109);
     transition: all 0.3s ease;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.493);
+}
+
+.display-cls{
+    display: block;
+    opacity: 1;
 }
 
 // Animation -contents
@@ -46,11 +55,6 @@ h1{
     -moz-user-select: none;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory ;   // dealing with only y-axis and it's mandatory.
-
-    @media screen and (max-width: $tablet), (max-width:$mobile){
-        scroll-snap-type: none;
-    }
 
     header{
         position: relative;
@@ -100,14 +104,19 @@ h1{
             z-index: 1;
             width: 100%;
             height: 100vh;
-            padding-top: 12em;
+            padding-top: 10%;
             line-height: 1em;
             font-family: $quicksand;
             color: white;
             background-color: $sky-blue; //bg for overlay
 
             h4{
-                font-size: 1.8em;
+                font-size: 2em;
+
+                @media screen and (max-width:$tablet){
+                    font-size: 1.8em;
+                    margin-top: 60px;
+                }
             }
 
             div{
@@ -118,7 +127,7 @@ h1{
                 width: 100%;
                 height: 60px;
                 margin: 0px auto;
-                font-size: 2em;
+                font-size: 2.5em;
                 @media screen and (max-width:$tablet){
                     height: 180px;
                 }
@@ -130,18 +139,19 @@ h1{
                 }
                 #india{
                     font-family: $caveat;
-                    font-size: 2.6em;
+                    font-size: 2.5em;
                     color: $fawn;
                     @media screen and (max-width:$tablet){
                         width: 100%;
                     }
                     @media screen and (max-width:$mobile){
-                        font-size: 4em;
+                        font-size: 3em;
                         line-height: 1em;
                     }
                 }
             }
             .explore-btn{
+                margin-top: 5%;
                 padding: 20px 40px;
                 font-weight: 700;
             }
@@ -157,6 +167,8 @@ h1{
     
     
     /* --------X----- Main Content of the site -----X------ */
+
+    // 
     
     section{
         // background-color: yellow;
@@ -166,12 +178,8 @@ h1{
         width: 100%;
         min-height: 100%;
         text-align: center;
-        scroll-snap-align: start;  // works with scroll-snap-type in the container to align the element
-        @media screen and (max-width: $tablet), (max-width:$mobile){
-            scroll-snap-align: none;
-        }
         
-        h1{  // will be applicable to all h1 inside section, even inside sub-sub division.
+        h1{
             font-family: $josefin-sans;
             padding: 20px;
         }
@@ -180,10 +188,8 @@ h1{
             position: relative;
             width: 100%;
             height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 20px;
-            padding-bottom: 100px;
+            margin: auto;
+            padding: 20px 0;
             background: url(../Assets/Abract01.png) no-repeat;
             background-size: 65%;
             background-position: right;
@@ -197,12 +203,11 @@ h1{
                 column-gap: 10px;
                 height: 50vh;
                 width: 60%;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 60px;
-                border-bottom-right-radius: 2.3em;
-                border-top-left-radius: 2.3em;
-                box-shadow: 3px 2px 20px 1px rgba(0, 0, 0, 0.377);
+                margin: 60px auto;
+                border-bottom-right-radius: 2.5em;
+                border-top-left-radius: 2.5em;
+                box-shadow:  5px 40px 50px 2px rgba(17, 12, 46, 0.15);
+                cursor: pointer;
 
                 @media screen and (max-width: $mobile), (max-width: $tablet){
                     grid-template-columns: 1fr;
@@ -212,24 +217,16 @@ h1{
                 }
 
                 div{
-                    // width: 60%;
                     height: 100%;
                     border-top-left-radius: 2.3em;
-                    overflow: hidden; // to stop image from coming out when hovered.
+                    overflow: hidden;
                     // background-color: yellow;
-                    
-                    // @media screen and (max-width:$mobile), (max-width: $tablet){
-                    //     display: block;
-                    //     width: 100%;
-                    //     height: 70%;
-                    // }
 
                     img{
                         // background-color: burlywood;
                         width: 100%;
                         height: 100%;
-                        transition: all 1s ease;  // smooth transition
-                        cursor: pointer;
+                        transition: all 1s ease;
 
                     }
                     img:hover{
@@ -253,34 +250,39 @@ h1{
                         width: 100%;
                     }
                 }
-            }
-            .card:nth-of-type(even){
-                grid-template-columns: 1fr 1.7fr;
 
-                @media screen and (max-width:$mobile), (max-width: $tablet) {
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1.7fr 1fr;
-                }
+                &:nth-of-type(even){
+                    background-color: blueviolet;
+                    grid-template-columns: 1fr 1.7fr;
 
-                div{
-                    order: 2;
-                    border-top-left-radius: 0;
-                    border-bottom-right-radius: 2.3em;
-                    @media screen and (max-width:$mobile), (max-width: $tablet){
-                        order: 0;
-                        border-bottom-right-radius: 0em;
+                    @media screen and (max-width:$mobile), (max-width: $tablet) {
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1.7fr 1fr;
                     }
 
-                    img{
-                        @media screen and (max-width: $mobile), (max-width: $tablet) {
-                            border-top-left-radius: 2.3em;
+                    div{
+                        order: 2;
+                        border-top-left-radius: 0;
+                        border-bottom-right-radius: 2.3em;
+                        
+                        @media screen and (max-width:$mobile), (max-width: $tablet){
+                            order: 0;
+                            border-bottom-right-radius: 0em;
+                        }
+
+                        img{
+                            @media screen and (max-width: $mobile), (max-width: $tablet) {
+                                border-top-left-radius: 2.3em;
+                            }
                         }
                     }
                 }
             }
+
             .detail-modal{
                 // background-color: khaki;
-                display: none;  // change to none
+                // display: block;
+                // display: none;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -289,8 +291,7 @@ h1{
                 line-height: 1.7em;
                 padding: 20px;
                 background-color: rgba(0, 0, 0, 0.4);
-                opacity: 0;
-                font-size: 1.2em;
+                // opacity: 0;
                 z-index: 11;
                 
                 .modal-content{
@@ -299,13 +300,15 @@ h1{
                     width: 80%;
                     height: 95%;
                     margin: auto;
-                    margin-top: 40px;
-                    padding: 10px;
+                    margin-top: 45px;
+                    padding: 10px 5%;
                     overflow-y: auto;
                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.568);
+                    border-radius: 2em;
                     //animation time
                     animation-name: modal-animate;
                     animation-duration: 0.6s;
+
                     @media screen and (max-width: $mobile), (max-width:$tablet) {
                         width: 90%;
                         img{
@@ -315,8 +318,9 @@ h1{
 
                     .close-modal{
                         position: sticky;
-                        top: 15px;
-                        margin: 15px 50px 0 0;
+                        top: 20px;
+                        // right: 10px;
+                        margin: 20px 2% 0 0;
                         float: right;
                         font-family: $quicksand;
                         font-size: 2.5em;
@@ -324,6 +328,8 @@ h1{
                         color: black;
                         padding: 5px;
                         transition: 0.3s;
+                        cursor: pointer;
+
                         @media screen and(max-width:$mobile), (max-width:$tablet) {
                             background-color: white;
                             padding: 0px 5px 5px 5px;
@@ -332,9 +338,6 @@ h1{
                     }
                     .close-modal:hover{
                         transform: scale(0.9);
-                    }
-                    .close-modal:focus{
-                        color: rgb(255, 163, 77);
                     }
 
                     h1{
@@ -367,36 +370,22 @@ h1{
                     .map-btn:focus{
                         transform: scale(0.9);
                     }
-                    .more-btn{
+                    .book-btn{
                         @extend .map-btn
                     }
                 }
             }
-            #place1:target,
-            #place2:target,
-            #place3:target,
-            #place4:target,
-            #place5:target,
-            #place6:target,
-            #place7:target,
-            #place8:target,
-            #place9:target,
-            #place10:target{
-                display: block;
-                opacity: 1;
-            }
-        }
-        /*-------X---- Cards container------X------ */
-    }
-    /* --------X----- Main Content of the site ----X------- */
 
-    /* --------------------Footer ---------------------------- */
+        }
+        
+    }
+
     footer{
-        // background-color: brown;
+        background-color: brown;
         width: 100%;
         height: 15vh;
         position: relative;
-        scroll-snap-align: start;
+
         @media screen and (max-width:$mobile), (max-width: $tablet) {
             height: 12vh;
             scroll-snap-align: none;

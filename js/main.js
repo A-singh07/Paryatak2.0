@@ -1,4 +1,8 @@
-// ------- NAV ------
+// --------- NAV ----------
+
+var menuContainer = $(".menu-container");
+var leftMenu = $(".left-side-menu");
+var rightMenu = $(".right-side-menu");
 
 //Rotate on hover
 $(".hamline").hover(
@@ -21,10 +25,10 @@ $(".hamclose").hover(
 $(".hamline").click(function () {
     $(this).css("display", "none");
     $(".hamclose").css("display", "flex");
-    $(".menu-container").css("width", "100vw");
-    $(".menu-container").css("left", "0");
-    $(".left-side-menu").css("transform", "translateX(0)");
-    $(".right-side-menu").css("transform", "scale(1)");
+    menuContainer.css("width", "100vw");
+    menuContainer.css("left", "0");
+    leftMenu.css("transform", "translateX(0)");
+    rightMenu.css("transform", "scale(1)");
     $(".right-side-menu img").css("borderRadius", "2em");
 });
 
@@ -32,9 +36,29 @@ $(".hamline").click(function () {
 $(".hamclose").click(function () {
     $(this).css("display", "none");
     $(".hamline").css("display", "flex");
-    $(".menu-container").css("width", "0");
-    $(".menu-container").css("left", "-100px");
-    $(".left-side-menu").css("transform", "translateX(-300px)");
-    $(".right-side-menu").css("transform", "scale(0)");
+    menuContainer.css("width", "0");
+    menuContainer.css("left", "-100px");
+    leftMenu.css("transform", "translateX(-300px)");
+    rightMenu.css("transform", "scale(0)");
     $(".right-side-menu img").css("borderRadius", "100%");
+});
+
+// ------- Section/Explore --------
+
+var detailModal = $(".detail-modal");
+var modalContent = $(".modal-content");
+var card = $(".card");
+var closeModal = $(".close-modal");
+
+//Default hiding all Detail modal
+for (let i = 1; i <= detailModal.length; i++) {
+    $("#place" + i + "-modal").hide();
+}
+
+card.click(function () {
+    $("#" + this.id + "-modal").show();
+})
+
+closeModal.click(function () {
+    $("#" + this.id + "-modal").hide();
 });
