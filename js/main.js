@@ -43,6 +43,16 @@ $(".hamclose").click(function () {
     $(".right-side-menu img").css("borderRadius", "100%");
 });
 
+$(".left-side-menu span").click(function () {
+    $(".hamclose").css("display", "none");
+    $(".hamline").css("display", "flex");
+    menuContainer.css("width", "0");
+    menuContainer.css("left", "-100px");
+    leftMenu.css("transform", "translateX(-300px)");
+    rightMenu.css("transform", "scale(0)");
+    $(".right-side-menu img").css("borderRadius", "100%");
+})
+
 
 // ------- LOGIN ----------
 

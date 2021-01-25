@@ -86,7 +86,7 @@ nav{
                     border-right: 5px solid white;
                     transform: translateX(-300px);
                     transition: 0.7s ease-out;
-                    // opacity: 0;
+
                     @media screen and (max-width:$tablet),(max-width:$mobile){
                         width: 80%;
                         margin: 0px auto;
@@ -95,7 +95,7 @@ nav{
                         justify-content: center;
                     }
     
-                    a{  
+                    span{  
                         // background-color: yellow;
                         width: 230px;
                         display: flex;
@@ -110,14 +110,15 @@ nav{
                         font-weight: 700;
                         border-bottom: 2px solid white;
                         transition: border-radius 0.5s ease;
-                        // transform: translate(-200px, 0px);
+                        cursor: pointer;
+
                         @media screen and (max-width:$tablet) {
                             font-size: 2em;
                             width: 200px;
                         }
 
                     }
-                    a:hover{
+                    span:hover{
                         background-color: rgba(255, 255, 255, 0.103);
                         border-radius: 1em;
                         border-left: 5px solid white;
