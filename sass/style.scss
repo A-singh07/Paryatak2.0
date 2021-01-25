@@ -333,13 +333,17 @@ h1{
                 margin: 60px auto;
                 border-bottom-right-radius: 2.5em;
                 border-top-left-radius: 2.5em;
-                box-shadow:  5px 40px 50px 2px rgba(17, 12, 46, 0.15);
+                box-shadow:  5px 30px 40px 2px rgba(17, 12, 46, 0.219);
                 cursor: pointer;
 
-                @media screen and (max-width: $mobile), (max-width: $tablet){
+                @media screen and (max-width: $tablet){
+                    width: 85%;
+                }
+
+                @media screen and (max-width: $mobile){
                     grid-template-columns: 1fr;
                     grid-template-rows: 1.7fr 1fr;
-                    width: 85%;
+                    width: 95%;
                     height: 80vh;
                 }
 
@@ -436,13 +440,6 @@ h1{
                     animation-name: modal-animate;
                     animation-duration: 0.6s;
 
-                    @media screen and (max-width: $mobile), (max-width:$tablet) {
-                        width: 90%;
-                        img{
-                            width: 95%;
-                        }
-                    }
-
                     .close-modal{
                         position: sticky;
                         top: 20px;
@@ -475,8 +472,10 @@ h1{
                         margin-left: auto;
                         margin-right: auto;
                         line-height: 1.2em;  // 1.7(.detail-modal) + 1.2(here)
-                        @media screen and(max-width:$mobile), (max-width:$tablet){
-                            width: 70%;
+
+                        @media screen and (max-width:$tablet){
+                            width: 90%;
+                            font-size: 1em;
                         }
                     }
                     p{
@@ -501,6 +500,35 @@ h1{
                         @extend .map-btn
                     }
                 }
+
+                @media screen and (max-width:$tablet) {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    
+                    .modal-content{
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        margin-top: 40px;
+
+                        img{
+                            width: 90%;
+                            height: 40%;
+                        }
+
+                        p{
+                            font-size: 0.7em;
+                            padding: 20px;
+                            line-height: 1.3em;
+                        }
+                        .map-btn{
+                            padding: 10px 15px;
+                            font-size: 1em;
+                        }
+                    }
+                }
+
             }
 
         }
@@ -512,11 +540,6 @@ h1{
         width: 100%;
         height: 15vh;
         position: relative;
-
-        @media screen and (max-width:$mobile), (max-width: $tablet) {
-            height: 12vh;
-            scroll-snap-align: none;
-        }
 
         .contact{
             background-color:black;
@@ -577,6 +600,21 @@ h1{
                 }
             }
 
+        }
+
+        @media screen and (max-width:$mobile), (max-width: $tablet) {
+            height: 12vh;
+
+            .contact{
+                a{
+                    width: 40px;
+                    height: 40px;
+
+                    i{
+                        font-size: 1em;
+                    }
+                }
+            }
         }
     }
     /* ----------X--------Footer -----------X---------- */

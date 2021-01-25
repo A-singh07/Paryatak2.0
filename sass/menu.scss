@@ -72,7 +72,7 @@ nav{
                 position: absolute;
                 top: 0;
                 left: 0;
-                // opacity: 0;
+
                 @media screen and (max-width:$tablet),(max-width:$mobile){
                     grid-template-columns: 1fr;
                     background-color: rgba(0, 0, 0, 0.904);
@@ -88,11 +88,10 @@ nav{
                     transition: 0.7s ease-out;
 
                     @media screen and (max-width:$tablet),(max-width:$mobile){
-                        width: 80%;
-                        margin: 0px auto;
-                        border-right: none;
-                        display: grid;
-                        justify-content: center;
+                        width: 70%;
+                        margin: auto;
+                        padding-left: 0;
+                        transform: translateX(0);
                     }
     
                     span{  
@@ -113,8 +112,10 @@ nav{
                         cursor: pointer;
 
                         @media screen and (max-width:$tablet) {
-                            font-size: 2em;
-                            width: 200px;
+                            font-size: 1.5em;
+                            width: 100px;
+                            padding: 0;
+                            border-bottom: 0;
                         }
 
                     }
@@ -154,9 +155,15 @@ nav{
         cursor: pointer;
         transition: 0.3s ease;
         margin-left: 200px;
-    }
-    .site-name:hover{
-        transform: scale(1.1);
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width:$tablet){
+            font-size: 2em;
+            margin-left: 0;
+        }
     }
     
     .nav-right{
@@ -167,7 +174,6 @@ nav{
         font-weight: 700;
         font-size: 1.3em;
         color: black;
-        transition: 0.3s ease;
         margin-right: 10px;
 
         div{
@@ -175,9 +181,31 @@ nav{
             margin: 0 20px;
             padding: 15px;
             cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        @media screen and (max-width:$tablet){
+            display: none;
         }
     }
-    .nav-rigt:hover{
-        transform: scale(1.1);
+
+    @media screen and (max-width:$tablet){
+        height: 50px;
+
+        .ham-menu-wrap{
+            .ham-open{
+                width: 60px;
+                
+                .hamline{
+                    i{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
     }
 }
