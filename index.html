@@ -42,13 +42,17 @@
                 <span class="register-open">Register here</span>
             </form>
 
-            <!--Forgot password -->
+            <!--Register Modal -->
             <div id="register-modal">
-                <form action="" class="form">
+                <form action="action.php" method="POST" class="form">
                     <a href="#" class="close-login">&times;</a>
                     <h2>Register Here</h2>
                     <div class="input-group">
-                        <input type="email" name="email" id="email" required>
+                        <input type="text" name="name" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="regis-email" id="regis-email" required>
                         <label for="email">Email</label>
                     </div>
                     <div class="input-group">
