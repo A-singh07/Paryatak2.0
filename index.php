@@ -1,3 +1,7 @@
+<?php
+include_once 'includes/action.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="./css/style.css">
@@ -24,49 +27,29 @@
 
         <!-- -------------- LOGIN MODAL -------------------- -->
         <div class="login-wrapper">
-            <form action="" class="form" id="login-modal">
+            <form action="includes/register.php" class="form" id="login-modal" method="POST">
                 <a href="" class="close-login">&times;</a>
-                <h2>Login</h2>
+                <h2>Register</h2>
                 <div class="input-group">
-                    <input type="email" name="login-email" id="login-email" required>
-                    <label for="login-email">Email</label>
+                    <input type="text" name="firstname" id="firstname" required>
+                    <label for="firstname">First Name</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="loginPassword" id="loginPassword" required>
-                    <label for="loginPassword">Password</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                    <label for="lastname">Last Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
                 </div>
 
                 <!--Submit Button -->
-                <input type="submit" value="login" class="submit-btn">
-                <!--Forgot password link-->
-                <span class="register-open">Register here</span>
+                <button type="submit" name="submit" class="submit-btn">Join</button>
             </form>
-
-            <!--Register Modal -->
-            <div id="register-modal">
-                <form action="action.php" method="POST" class="form">
-                    <a href="#" class="close-login">&times;</a>
-                    <h2>Register Here</h2>
-                    <div class="input-group">
-                        <input type="text" name="name" id="name" required>
-                        <label for="name">Full Name</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="regis-email" id="regis-email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" name="regis-pass" id="regis-pass" required>
-                        <label for="regis-pass">Password</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" name="conf-pass" id="config-pass" required>
-                        <label for="config-pass">Confirm Password</label>
-                    </div>
-                    <input type="submit" value="Register" class="submit-btn">
-                    <span class="login-open">Login here</span>
-                </form>
-            </div>
         </div>
 
         <!-- -------------------- Navigation Menu -------------------- -->
@@ -85,12 +68,11 @@
                             <span>Home</span>
                             <span>Places</span>
                             <span>Contact</span>
-                            <span class="login-open">Login</span>
+                            <span class="login-open">Join Us</span>
                         </div>
 
                         <div class="right-side-menu">
-                            <img src="./Assets/action-blur-car-child-386009.jpg" alt="ToyCar" width="100%"
-                                height="100%">
+                            <img src="./Assets/action-blur-car-child-386009.jpg" alt="ToyCar" width="100%" height="100%">
                         </div>
                     </div>
                 </div>
@@ -150,10 +132,8 @@
                             is also known for its beautiful temples. <br> This region also attracts adventure seekers
                             and has a lot of options in adventure sports like paragliding, horse riding, zorbing,
                             trekking etc.</p>
-                        <a href="https://www.google.com/maps/place/Khajjiar,+Himachal+Pradesh+176314/@32.5503598,76.0455439,14z/data=!3m1!4b1!4m5!3m4!1s0x391c966a723433b5:0xb281d8e676ebd3dc!8m2!3d32.555795!4d76.0655834"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://www.holidify.com/places/khajjiar/" target="_blank" rel="noopener noreferrer"
-                            class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Khajjiar,+Himachal+Pradesh+176314/@32.5503598,76.0455439,14z/data=!3m1!4b1!4m5!3m4!1s0x391c966a723433b5:0xb281d8e676ebd3dc!8m2!3d32.555795!4d76.0655834" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.holidify.com/places/khajjiar/" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -174,10 +154,8 @@
                             Taj Lake Palace, a star attraction of this lake? This luxury hotel (which was once a grand
                             palace) is located on Jag Niwas, one of the islands on the lake, and offers the well-heeled
                             services fit for a king and queen.</p>
-                        <a href="https://www.google.com/maps/place/Lake+Pichola/@24.5719986,73.6614904,14z/data=!3m1!4b1!4m5!3m4!1s0x3967e56041553fe7:0xdfef96846886cdd0!8m2!3d24.572!4d73.679"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://udaipurtourism.co.in/lake-pichola-udaipur" target="_blank"
-                            rel="noopener noreferrer" class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Lake+Pichola/@24.5719986,73.6614904,14z/data=!3m1!4b1!4m5!3m4!1s0x3967e56041553fe7:0xdfef96846886cdd0!8m2!3d24.572!4d73.679" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://udaipurtourism.co.in/lake-pichola-udaipur" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -198,10 +176,8 @@
                             tea plantations established in the late 19th century. Eravikulam National Park, a habitat
                             for the endangered mountain goat Nilgiri tahr, is home to the Lakkam Waterfalls, hiking
                             trails and 2,695m-tall Anamudi Peak.</p>
-                        <a href="https://www.google.com/maps/place/Munnar,+Kerala+685612/@10.0806491,77.0466683,14z/data=!3m1!4b1!4m5!3m4!1s0x3b0799794d099a6d:0x63250e5553c7e0c!8m2!3d10.0889333!4d77.0595248"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://www.munnar.com/" target="_blank" rel="noopener noreferrer"
-                            class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Munnar,+Kerala+685612/@10.0806491,77.0466683,14z/data=!3m1!4b1!4m5!3m4!1s0x3b0799794d099a6d:0x63250e5553c7e0c!8m2!3d10.0889333!4d77.0595248" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.munnar.com/" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -227,10 +203,8 @@
                             snow.It’s a beautiful place to hike around in itself, flowers or not, and if you’re into
                             rock climbing there are plenty of opportunities to break a sweat within the valley.
                         </p>
-                        <a href="https://www.google.com/maps/place/Dz%C3%BCkou+Valley/@25.5341526,94.0715646,13z/data=!4m8!1m2!2m1!1sDzukou+Valley!3m4!1s0x3748a1d31c756cb1:0x6a69d42997e6088e!8m2!3d25.5071033!4d94.1334665?hl=en"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://www.lostwithpurpose.com/dzukou-valley/" target="_blank"
-                            rel="noopener noreferrer" class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Dz%C3%BCkou+Valley/@25.5341526,94.0715646,13z/data=!4m8!1m2!2m1!1sDzukou+Valley!3m4!1s0x3748a1d31c756cb1:0x6a69d42997e6088e!8m2!3d25.5071033!4d94.1334665?hl=en" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.lostwithpurpose.com/dzukou-valley/" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -255,10 +229,8 @@
                             all around – rocks covered with unusual moss and ferns, flowers and shrubs – foliage
                             sprouting out of every conceivable nook and corner of the hillside. The entire area is now a
                             sanctuary.</p>
-                        <a href="https://www.google.com/maps/place/Binsar,+Uttarakhand+263628/@29.7065293,79.7513287,16z/data=!3m1!4b1!4m5!3m4!1s0x39a0b598b44aedc3:0x760dc4f914c720fd!8m2!3d29.7053733!4d79.7551806"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://uttarakhandtourism.gov.in/destination/binsar/" target="_blank"
-                            rel="noopener noreferrer" class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Binsar,+Uttarakhand+263628/@29.7065293,79.7513287,16z/data=!3m1!4b1!4m5!3m4!1s0x39a0b598b44aedc3:0x760dc4f914c720fd!8m2!3d29.7053733!4d79.7551806" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://uttarakhandtourism.gov.in/destination/binsar/" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -281,10 +253,8 @@
                             but perfect beach located between its two more famous cousins, Anjuna on one side and
                             Calangute on the other. It is a good place to enjoy some quite moments and dwell in peaceful
                             contemplation with oneself.</p>
-                        <a href="https://www.google.com/maps/place/Baga+Beach/@15.5567185,73.7463912,16z/data=!3m1!4b1!4m5!3m4!1s0x3bbfea1cd8a1deff:0xba7066c0ee35c1e0!8m2!3d15.5552787!4d73.7517307"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://www.holidify.com/places/goa/baga-beach-sightseeing-6226.html" target="_blank"
-                            rel="noopener noreferrer" class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps/place/Baga+Beach/@15.5567185,73.7463912,16z/data=!3m1!4b1!4m5!3m4!1s0x3bbfea1cd8a1deff:0xba7066c0ee35c1e0!8m2!3d15.5552787!4d73.7517307" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.holidify.com/places/goa/baga-beach-sightseeing-6226.html" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
 
@@ -305,10 +275,8 @@
                             here on the beach towards Mirzapur, the nearby fishing market and community at the
                             confluence of the Budhabalanga River (Balaramgadi). It is a suitable picnic spot. One of
                             Odisha Tourism's Panthanivas (guest house) is situated here.</p>
-                        <a href="https://www.google.com/maps?q=Chandipur+sea+beach,+Odisha&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjy2r7M-8XqAhWMyzgGHUmjBTgQ_AUoAnoECA8QBA"
-                            target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
-                        <a href="https://www.odishatourism.gov.in/content/tourism/en/blog-details.html?url=the-tale-of-chandipur-beach-beyond-the-vanishing-sea"
-                            target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
+                        <a href="https://www.google.com/maps?q=Chandipur+sea+beach,+Odisha&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjy2r7M-8XqAhWMyzgGHUmjBTgQ_AUoAnoECA8QBA" target="_blank" rel="noopener noreferrer" class="btn map-btn">Locate</a>
+                        <a href="https://www.odishatourism.gov.in/content/tourism/en/blog-details.html?url=the-tale-of-chandipur-beach-beyond-the-vanishing-sea" target="_blank" rel="noopener noreferrer" class="btn book-btn">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -323,8 +291,7 @@
                 <a href="" id="facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/aman07s/" id="instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/aman-singh-278a48192" target="_blank" rel="noopener noreferrer"
-                    id="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/aman-singh-278a48192" target="_blank" rel="noopener noreferrer" id="linkedin"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </footer>
         <!-- ---------x-------- Footer ---------------------x--- -->
@@ -333,8 +300,7 @@
 
 
     <!-- jQuery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <!-- Custom Js File -->
     <script src="./js/main.js"></script>

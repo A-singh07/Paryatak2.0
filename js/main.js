@@ -84,6 +84,7 @@ closeLogin.click(function () {
 
 
 
+
 // ------- Section/Explore --------
 
 var detailModal = $(".detail-modal");
