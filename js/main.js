@@ -43,6 +43,37 @@ $(".hamclose").click(function () {
     $(".right-side-menu img").css("borderRadius", "100%");
 });
 
+
+// ------- LOGIN ----------
+
+var loginWrapper = $(".login-wrapper");
+var loginOpen = $(".login-open");
+var closeLogin = $(".close-login");
+var loginModal = $("#login-modal");
+var registerOpen = $(".register-open")
+var registerModal = $("#register-modal");
+
+loginWrapper.hide();
+
+loginOpen.click(function () {
+    loginWrapper.show();
+    loginModal.show();
+    registerModal.hide();
+});
+
+registerOpen.click(function () {
+    registerModal.show();
+    loginModal.hide();
+});
+
+closeLogin.click(function () {
+    loginWrapper.hide();
+    loginModal.hide();
+    registerModal.hide();
+});
+
+
+
 // ------- Section/Explore --------
 
 var detailModal = $(".detail-modal");
@@ -62,3 +93,4 @@ card.click(function () {
 closeModal.click(function () {
     $("#" + this.id + "-modal").hide();
 });
+

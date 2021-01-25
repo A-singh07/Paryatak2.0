@@ -21,6 +21,48 @@
 <body>
 
     <div class="mother-container">
+        <div class="login-wrapper">
+            <form action="" class="form" id="login-modal">
+                <a href="" class="close-login">&times;</a>
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="email" name="login-email" id="login-email" required>
+                    <label for="login-email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="loginPassword" id="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+
+                <!--Submit Button -->
+                <input type="submit" value="login" class="submit-btn">
+                <!--Forgot password link-->
+                <span class="register-open">Register here</span>
+            </form>
+
+            <!--Forgot password -->
+            <div id="register-modal">
+                <form action="" class="form">
+                    <a href="#" class="close-login">&times;</a>
+                    <h2>Register Here</h2>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="regis-pass" id="regis-pass" required>
+                        <label for="regis-pass">Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="conf-pass" id="config-pass" required>
+                        <label for="config-pass">Confirm Password</label>
+                    </div>
+                    <input type="submit" value="Register" class="submit-btn">
+                    <span class="login-open">Login here</span>
+                </form>
+            </div>
+        </div>
+
         <!-- -------------------- Navigation Menu -------------------- -->
         <nav>
             <div class="ham-menu-wrap">
@@ -52,13 +94,13 @@
                 <div><a href="#home">Paryatak</a></div>
             </div>
             <div class="nav-right">
-                <div><a href="#Login">login</a></div>
+                <div class="login-open">login</div>
                 <div><a href="#contact">contact</a></div>
             </div>
         </nav>
         <!-- -----------x-------- Navigation Menu -----------X------- -->
 
-        <!-- --------------------- Header/Landing Area ------------------------->
+        <!-- --------------------- Header/Landing Area ------------------------>
         <header id="home">
             <div class="header-bg-wrap">
                 <video src="Assets/traveling-bg-video.mp4" autoplay loop="true" muted="true"></video>
@@ -272,8 +314,8 @@
         <!-- ------------------ Footer ------------------------- -->
         <footer>
             <div class="contact" id="contact">
-                <a href="#" id="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" id="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="" id="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aman07s/" id="instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" id="twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/aman-singh-278a48192" target="_blank" rel="noopener noreferrer"
                     id="linkedin"><i class="fab fa-linkedin-in"></i></a>
